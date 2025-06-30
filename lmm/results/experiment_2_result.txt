@@ -1,0 +1,23 @@
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                       MixedLM           Dependent Variable:           z_correlation
+No. Observations:            12800             Method:                       ML           
+No. Groups:                  200               Scale:                        0.0607       
+Min. group size:             64                Log-Likelihood:               -401.5601    
+Max. group size:             64                Converged:                    Yes          
+Mean group size:             64.0                                                         
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                       0.809    0.016  49.976 0.000  0.777  0.841
+activation[T.ReLU]                             -0.208    0.023  -9.096 0.000 -0.253 -0.163
+activation[T.Sigmoid]                           0.102    0.023   4.436 0.000  0.057  0.146
+activation[T.Swish]                            -0.155    0.023  -6.769 0.000 -0.200 -0.110
+activation[T.Tanh]                              0.092    0.023   4.029 0.000  0.047  0.137
+bn_position[T.before_bn]                        0.055    0.023   2.423 0.015  0.011  0.100
+activation[T.ReLU]:bn_position[T.before_bn]     0.214    0.032   6.624 0.000  0.151  0.278
+activation[T.Sigmoid]:bn_position[T.before_bn] -0.574    0.032 -17.725 0.000 -0.637 -0.510
+activation[T.Swish]:bn_position[T.before_bn]    0.170    0.032   5.243 0.000  0.106  0.233
+activation[T.Tanh]:bn_position[T.before_bn]    -0.909    0.032 -28.075 0.000 -0.972 -0.846
+Group Var                                       0.004    0.002                            
+==========================================================================================

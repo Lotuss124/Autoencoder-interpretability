@@ -1,0 +1,39 @@
+self.encoder = nn.Sequential(
+            nn.Linear(60498, 15000),
+            nn.BatchNorm1d(15000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(15000, 4000),
+            nn.BatchNorm1d(4000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(4000, 1000),
+            nn.BatchNorm1d(1000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(1000, 256),
+            nn.BatchNorm1d(256),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(256, 64)
+        )
+
+        self.decoder = nn.Sequential(
+            nn.Linear(64, 256),
+            nn.BatchNorm1d(256),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(256, 1000),
+            nn.BatchNorm1d(1000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(1000, 4000),
+            nn.BatchNorm1d(4000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(4000, 15000),
+            nn.BatchNorm1d(15000),
+            nn.LeakyReLU(0.2),
+            nn.Dropout(0.3),
+            nn.Linear(15000, 60498)
+        )
